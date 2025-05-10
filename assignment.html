@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Resource Sharing - PeerConnects</title>
+  <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+  <header>
+    <h1>PeerConnects</h1>
+    <p>Academic Resource Sharing</p>
+  </header>
+
+  <section class="upload-section">
+    <h2>Upload Your Academic Resources</h2>
+    <form>
+      <input type="text" placeholder="Title" required>
+      <textarea placeholder="Description" required></textarea>
+      <select name="category" required>
+        <option value="">Select Category</option>
+        <option value="book">Book (PDF)</option>
+        <option value="pyq">Previous Year Question Paper</option>
+        <option value="study_guide">Study Guide</option>
+        <option value="practice_question">Practice Questions</option>
+        <option value="research_paper">Research Paper</option>
+        <option value="lecture_slide">Lecture Slides</option>
+        <option value="Assigment">Assignment</option>
+        <option value="Subject Notes">Notes</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="file" accept=".pdf,.docx,.ppt,.txt,.jpg,.png" required>
+      <button type="submit">Upload</button>
+    </form>
+  </section>
+
+  <section class="ai-summary">
+    <h2>AI-Powered Summary</h2>
+    <p>When a resource is uploaded, our AI will:</p>
+    <ul>
+      <li>Summarize key points from the document.</li>
+      <li>Detect main topics and add relevant tags.</li>
+      <li>Help other students find resources more easily!</li>
+    </ul>
+    <p><em>Making academic sharing smarter!</em></p>
+  </section>
+
+  <section class="recent-uploads">
+    <h2>Recently Shared Resources</h2>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search resources..." onkeyup="searchResources()">
+    </div>
+    
+    <div class="resource-card">
+      <h3>Physics - Laws of Motion (Book)</h3>
+      <p>A comprehensive PDF book on Newtonian mechanics. AI tags: Mechanics, Force, Motion.</p>
+      <a href="#">Download</a>
+    </div>
+    <div class="resource-card">
+      <h3>Math - PYQ - Calculus (2019)</h3>
+      <p>Previous year question paper for Calculus. AI tags: Calculus, Integration, Limits.</p>
+      <a href="#">Download</a>
+    </div>
+    <div class="resource-card">
+      <h3>Chemistry - Organic Chemistry Study Guide</h3>
+      <p>A detailed study guide for Organic Chemistry. AI tags: Chemistry, Organic, Reactions.</p>
+      <a href="#">Download</a>
+    </div>
+  </section>
+
+  <script>
+    function searchResources() {
+      let input, filter, cards, card, title, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toLowerCase();
+      cards = document.querySelectorAll('.resource-card');
+      
+      for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        title = card.querySelector('h3');
+        txtValue = title.textContent || title.innerText;
+        
+        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

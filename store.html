@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Borrow Notes & Devices | PeerConnects</title>
+  <link rel="stylesheet" href="store.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="borrow-container">
+    <header>
+      <h1>PeerConnects Vault Marketplace</h1>
+      <p>Buy, Rent or Donate study materials & electronics</p>
+    </header>
+
+    <div class="tabs">
+      <button class="active">Buy</button>
+      <button> <a href="rent.html">Rent</a>  </button>
+      <button> <a href="donate.html">Donate</a></button>
+    </div>
+
+    <div class="categories">
+      <span>All</span>
+      <span>Notes</span>
+      <span>Books</span>
+      <span>Laptops</span>
+      <span>Calculators</span>
+      <span>Headphones</span>
+    </div>
+
+    <div class="items-grid">
+      <div class="item-card">
+        <img src="laptop.png" alt="Laptop"/>
+        <h3>HP i5 Laptop</h3>
+        <p>Good for coding & notes</p>
+        <span class="price">₹18,000</span>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="item-card">
+        <img src="notes.png" alt="Notes"/>
+        <h3>Digital Logic Notes</h3>
+        <p>Handwritten | 45 pages</p>
+        <span class="price">₹100</span>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="item-card">
+        <img src="sony.png" alt="Headphones"/>
+        <h3>Sony Headphones</h3>
+        <p>Noise Cancelling</p>
+        <span class="price">₹860</span>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- Sell Accessories Section -->
+<section class="sell-accessory">
+  <h2>Want to Sell Your Accessories?</h2>
+  <p>Enter details to list your item for sale</p>
+  <form class="sell-form">
+    <input type="text" placeholder="Accessory Name (e.g., Logitech Mouse)" required />
+    <input type="text" placeholder="Description (e.g., Wireless, New)" required />
+    <input type="number" placeholder="Selling Price (in ₹)" required />
+    <input type="file" accept="image/*" />
+    <button type="submit">List for Sale</button>
+  </form>
+</section>
+
+
+
+</body>
+</html>

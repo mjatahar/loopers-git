@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.vault-container {
+  max-width: 800px;
+  margin: auto;
+  background: #2d3e50;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color:#c3cfe2;
+}
+
+header p {
+  font-size: 1rem;
+  color: #e1c7c7;
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.upload-card {
+  border: 2px dashed #aaa;
+  border-radius: 15px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  background: rgba(226, 197, 228, 0.6);
+}
+
+.upload-card:hover {
+  background: #c3cfe2;
+}
+
+.upload-card i {
+  font-size: 2.5rem;
+  color: #c3cfe2;
+  margin-bottom: 0.5rem;
+}
+
+.upload-card span {
+  color: #c3cfe2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.issued-documents h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color:#c3cfe2;
+}
+
+.doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doc-item {
+  background: rgb(223, 203, 223);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  justify-content: space-between;
+}
+
+.doc-item i {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.pdf {
+  color: #e53e3e;
+}
+.word {
+  color: #0f1e2c;
+}
+
+.doc-info {
+  flex: 1;
+}
+
+.doc-info strong {
+  display: block;
+  font-weight: 600;
+}
+
+.doc-info small {
+  color: #777;
+}
+
+.doc-actions i {
+  font-size: 1.2rem;
+  color: #13121e;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.doc-actions i:hover {
+  transform: scale(1.2);
+}
+
+🔐 Issued Documents Section (HTML)
+
+Place this below your upload section in the existing vault page:
+
+<section class="issued-docs-section">
+  <div class="issued-header">
+    <h2>Your Issued Documents</h2>
+    <a href="#" class="view-all">VIEW ALL (7)</a>
+  </div>
+  <div class="issued-docs-carousel">
+    <div class="doc-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Aadhaar_Logo.svg" alt="Aadhaar" />
+      <div class="doc-text">
+        <h4>Aadhaar Card</h4>
+        <p>Unique Identification Authority of...</p>
+      </div>
+    </div>
+
+    <div class="doc-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Income_Tax_India_Logo.png" alt="PAN" />
+      <div class="doc-text">
+        <h4>PAN Verification</h4>
+        <p>Income Tax Department</p>
+      </div>
+    </div>
+
+    <div class="doc-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/dc/Bihar_Logo.png" alt="Caste" />
+      <div class="doc-text">
+        <h4>Caste Certificate</h4>
+        <p>General Administration Dept</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+.issued-docs-section {
+  margin-top: 2rem;
+}
+
+.issued-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.issued-header h2 {
+  font-size: 1.4rem;
+  color:#c3cfe2;
+}
+
+.issued-header .view-all {
+  color: #c3cfe2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.issued-docs-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.doc-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.doc-card:hover {
+  transform: scale(1.03);
+}
+
+.doc-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.doc-text h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #111;
+}
+
+.doc-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}

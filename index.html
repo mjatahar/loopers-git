@@ -1,0 +1,95 @@
+                                                                                                                                                                           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeerConnects Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="close-btn" id="close-btn">&#10005;</span>
+            <h2>PeerConnects</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="assignment.html">Academic Resources</a></li>
+            <li><a href="vault.html">Your Vault</a></li>
+            <li><a href="collab.html">Collaboration</a></li>
+            <li><a href="store.html">Campus Utilities</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hamburger Icon -->
+        <span class="open-btn" id="open-btn">&#9776;</span>
+
+        <header class="welcome-header">
+            <h1>Welcome back, Jawed!</h1>
+            <a href="profile.html">
+            <img src="profile.jpg"  alt="Profile" class="profile-pic">
+            </a>
+        </header>
+
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-slider">
+                <div class="activity-card">Uploaded DSA Notes</div>
+                <div class="activity-card">Shared a Collab Request</div>
+                <div class="activity-card">Rented Calculator</div>
+                <div class="activity-card">Updated Vault Files</div>
+            </div>
+        </section>
+
+        <section class="message-announcement">
+            <div class="messages">
+                <h2>Messages for You</h2>
+                <ul>
+                    <li>Alkais sent you a collaboration invite</li>
+                    <li>Junaid uploaded Physics PYQs</li>
+                </ul>
+            </div>
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <ul>
+                    <li>Hackathon registration closes on May 12</li>
+                    <li>New library hours updated</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="links-grid">
+                <a href="#">Vault</a>
+                <a href="assigment_notes.html">Academic Resources</a>
+                <a href="collab.html">Collaboration</a>
+                <a href="#">Campus Utilities</a>
+                <a href="#">Settings</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Sidebar toggle functionality
+        const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        openBtn.addEventListener('click', function() {
+            sidebar.style.width = '250px';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            sidebar.style.width = '0';
+        });
+    </script>
+</body>
+</html>

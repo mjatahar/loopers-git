@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
+  }
+  
+  header {
+    background-color: #2d3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+  }
+  
+  header p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+  section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .upload-section, .ai-summary, .recent-uploads {
+    background-color: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form input[type="text"],
+  form textarea,
+  form input[type="file"],
+  form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #2d3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #1c2a38;
+  }
+  
+  .resource-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  
+  .resource-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .resource-card a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .resource-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  form input,
+  form textarea,
+form select {
+  width: 100%; /* Ensures all elements take the same width */
+  box-sizing: border-box; /* Includes padding and border in the width */
+  margin-bottom: 10px; /* Adds spacing between elements */
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault | PeerConnects</title>
+  <link rel="stylesheet" href="vault.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* You can move this to vault.css */
+    .upload-card {
+      border: 2px dashed #ccc;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      display: block;
+    }
+
+    .upload-card:hover {
+      background-color: #f9f9f9;
+      border-color: #007bff;
+      color: #007bff;
+    }
+
+    .browse-label {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .issued-docs-carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+    }
+
+    .doc-card {
+      flex: 0 0 auto;
+      width: 200px;
+      scroll-snap-align: start;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .issued-docs-carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .issued-docs-carousel::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    .doc-item:hover,
+    .doc-card:hover {
+      background-color: #f3f3f3;
+      transform: scale(1.02);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="vault-container">
+    <header>
+      <h1>My Personal Vault</h1>
+      <p>Securely upload and view issued documents</p>
+    </header>
+
+    <section class="upload-section">
+      <label class="upload-card" for="fileUpload">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Drag & Drop or <span class="browse-label">Browse</span> files</p>
+        <input type="file" id="fileUpload" accept="image/*" hidden>
+      </label>
+    </section>
+
+    <section class="issued-documents">
+      <h2>Recent Issued</h2>
+      <div class="doc-list">
+        <div class="doc-item">
+          <i class="fas fa-file-pdf pdf"></i>
+          <div class="doc-info">
+            <strong>Transcript_2023.pdf</strong>
+            <small>Issued: Jan 15, 2024</small>
+          </div>
+          <div class="doc-actions">
+            <i class="fas fa-download"></i>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <i class="fas fa-file-word word"></i>
+          <div class="doc-info">
+            <strong>Intern_Certificate.docx</strong>
+            <small>Issued: Mar 3, 2024</small>
+          </div>
+          <div class="doc-actions">
+            <i class="fas fa-download"></i>
+          </div>
+        </div>
+      </div>
+
+      <section class="issued-docs-section">
+        <div class="issued-header">
+          <h2>Your Issued Documents</h2>
+          <a href="#" class="view-all">VIEW ALL (7)</a>
+        </div>
+        <div class="issued-docs-carousel">
+          <div class="doc-card">
+            <img src="aadharcard.png" alt="Aadhaar" />
+            <div class="doc-text">
+              <h4>Aadhaar Card</h4>
+              <p>Unique Identification Authority of...</p>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <img src="pancard.png" alt="PAN" />
+            <div class="doc-text">
+              <h4>PAN Verification</h4>
+              <p>Income Tax Department</p>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <img src="caste.png" alt="Caste" />
+            <div class="doc-text">
+              <h4>Caste Certificate</h4>
+              <p>General Administration Dept</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</body>
+</html>
